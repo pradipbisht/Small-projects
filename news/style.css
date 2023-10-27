@@ -1,0 +1,162 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: antiquewhite;
+}
+img{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+.heading-container{
+    background-color: red;
+    color: aliceblue;
+    font-size: 2.5em;
+    padding: 0.8em 0;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 50px 0 rgba(2,0,31,0.3);
+}
+.heading-container h4{
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+.heading-container .active {
+    background-color: red;
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    /* Add any other styling you want for the active state */
+}
+
+.options-container{
+    margin: 10em 0 2em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    text-align: center;
+}
+.option {
+    background-color: #d5d5d5;
+    border: none;
+    cursor: pointer;
+    padding: 0.8em 1.5em;
+    border-radius: 0.5em;
+    border: none;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 1em;
+}
+.news-card{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    box-shadow: 0 0 15px rgba(85,85,85,0.2);
+    margin: 1em 0;
+    border-radius: 15px;
+}
+.news-card img{
+    border-radius: 15px 15px 0 0;
+}
+.new-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    font-size: 15px;
+}
+.news-title{
+    font-weight: 600;
+    color: #0b0028;
+}
+.news-description{
+    color: #6f6f6f;
+    text-align: justify;
+    margin: 0.8em 0 1em 0;
+}
+.view-button{
+    position: relative;
+    text-decoration: none;
+    background-color: red;
+    color: #ffffff;
+    width: 7em;
+    text-align: center;
+    padding: 0.3em 0.2em;
+    border-radius: 5px;
+}
+/* dark  mode toggle */
+/* Light mode styles */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Toggle switch styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    left: 400px;
+    bottom: 45px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10%;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+/* -------------------------------------------------------------------------------------------------------- */
+.active{
+    background-color: red;
+    color: #ffffff;
+}
+@media only screen and (max-width:768px){
+    .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
